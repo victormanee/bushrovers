@@ -1,5 +1,7 @@
 import type { PublicMember, VerifyMember } from "@/lib/member-types";
 import placeholder from "@/assets/member-placeholder.svg";
+import victorManee from "@/assets/victor-manee.png";
+import evansMaina from "@/assets/evans-maina.jpg";
 
 type LocalMember = Omit<PublicMember, "roles"> & {
   roles: NonNullable<PublicMember["roles"]>;
@@ -65,7 +67,7 @@ const localMemberProfiles: LocalMember[] = [
     slug: "victor-manee",
     member_id: "BR-002",
     full_name: "Victor Manee",
-    photo_url: placeholder,
+    photo_url: victorManee,
     bio: "Member profile information coming soon.",
     join_date: null,
     birth_day: null,
@@ -137,7 +139,7 @@ const localMemberProfiles: LocalMember[] = [
     slug: "evans-maina",
     member_id: "BR-005",
     full_name: "Evans Maina",
-    photo_url: placeholder,
+    photo_url: evansMaina,
     bio: "Member profile information coming soon.",
     join_date: null,
     birth_day: null,
