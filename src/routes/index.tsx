@@ -83,9 +83,6 @@ function Home() {
                 Meet the Rovers <ArrowRight />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline">
-              <Link to="/story">Our story</Link>
-            </Button>
             <Button asChild size="lg" variant="secondary">
               <Link to="/contact">Join our journey</Link>
             </Button>

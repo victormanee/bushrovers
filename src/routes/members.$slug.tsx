@@ -145,9 +145,6 @@ function MemberProfile() {
               </Link>
             </Button>
             <Button asChild variant="ghost" size="sm">
-              <Link to="/about">About Bush Rovers</Link>
-            </Button>
-            <Button asChild variant="ghost" size="sm">
               <Link to="/members">Other Rovers</Link>
             </Button>
           </div>

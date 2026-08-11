@@ -1,7 +1,16 @@
 import type { PublicMember, VerifyMember } from "@/lib/member-types";
 import placeholder from "@/assets/member-placeholder.svg";
+//import kelvinNjoroge from "@/assets/kelvin-njoroge.jpg";
 import victorManee from "@/assets/victor-manee.png";
+//import johnKibara from "@/assets/john-kibara.jpg";
 import evansMaina from "@/assets/evans-maina.jpg";
+/*import andreaneKaniaru from "@/assets/andreane-kaniaru.jpg";
+import antonyNgui from "@/assets/antony-ngui.jpg";
+import angelKabi from "@/assets/angel-kabi.jpg";
+import ashleyMwende from "@/assets/ashley-mwende.jpg";
+import ngumi from "@/assets/ngumi.jpg";
+import solomon from "@/assets/solomon.jpg";
+import john from "@/assets/john.jpg";*/
 
 type LocalMember = Omit<PublicMember, "roles"> & {
   roles: NonNullable<PublicMember["roles"]>;

@@ -41,14 +41,9 @@ export const PILLARS = [
 
 export const NAV_LINKS = [
   { to: "/", label: "Home" },
-  { to: "/about", label: "About Us" },
-  { to: "/story", label: "Our Story" },
   { to: "/members", label: "Our Members" },
-  { to: "/activities", label: "Activities" },
   { to: "/achievements", label: "Achievements" },
-  { to: "/community-service", label: "Community Service" },
   { to: "/gallery", label: "Gallery" },
-  { to: "/leadership", label: "Leadership" },
   { to: "/contact", label: "Contact" },
   { to: "/verify", label: "Verify" },
 ] as const;

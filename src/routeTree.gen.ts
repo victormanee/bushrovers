@@ -10,15 +10,10 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as AboutRouteImport } from './routes/about'
 import { Route as AchievementsRouteImport } from './routes/achievements'
-import { Route as ActivitiesRouteImport } from './routes/activities'
 import { Route as AdminRouteImport } from './routes/admin'
-import { Route as CommunityServiceRouteImport } from './routes/community-service'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as GalleryRouteImport } from './routes/gallery'
-import { Route as LeadershipRouteImport } from './routes/leadership'
-import { Route as StoryRouteImport } from './routes/story'
 import { Route as MembersIndexRouteImport } from './routes/members.index'
 import { Route as MembersSlugRouteImport } from './routes/members.$slug'
 import { Route as VerifyIndexRouteImport } from './routes/verify.index'
@@ -29,29 +24,14 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const AchievementsRoute = AchievementsRouteImport.update({
   id: '/achievements',
   path: '/achievements',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ActivitiesRoute = ActivitiesRouteImport.update({
-  id: '/activities',
-  path: '/activities',
-  getParentRoute: () => rootRouteImport,
-} as any)
 const AdminRoute = AdminRouteImport.update({
   id: '/admin',
   path: '/admin',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const CommunityServiceRoute = CommunityServiceRouteImport.update({
-  id: '/community-service',
-  path: '/community-service',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContactRoute = ContactRouteImport.update({
@@ -62,16 +42,6 @@ const ContactRoute = ContactRouteImport.update({
 const GalleryRoute = GalleryRouteImport.update({
   id: '/gallery',
   path: '/gallery',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const LeadershipRoute = LeadershipRouteImport.update({
-  id: '/leadership',
-  path: '/leadership',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const StoryRoute = StoryRouteImport.update({
-  id: '/story',
-  path: '/story',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MembersIndexRoute = MembersIndexRouteImport.update({
@@ -97,15 +67,10 @@ const VerifyMemberIdRoute = VerifyMemberIdRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/achievements': typeof AchievementsRoute
-  '/activities': typeof ActivitiesRoute
   '/admin': typeof AdminRoute
-  '/community-service': typeof CommunityServiceRoute
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
-  '/leadership': typeof LeadershipRoute
-  '/story': typeof StoryRoute
   '/members/$slug': typeof MembersSlugRoute
   '/verify/$memberId': typeof VerifyMemberIdRoute
   '/members/': typeof MembersIndexRoute
@@ -113,15 +78,10 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/achievements': typeof AchievementsRoute
-  '/activities': typeof ActivitiesRoute
   '/admin': typeof AdminRoute
-  '/community-service': typeof CommunityServiceRoute
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
-  '/leadership': typeof LeadershipRoute
-  '/story': typeof StoryRoute
   '/members/$slug': typeof MembersSlugRoute
   '/verify/$memberId': typeof VerifyMemberIdRoute
   '/members': typeof MembersIndexRoute
@@ -130,15 +90,10 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
   '/achievements': typeof AchievementsRoute
-  '/activities': typeof ActivitiesRoute
   '/admin': typeof AdminRoute
-  '/community-service': typeof CommunityServiceRoute
   '/contact': typeof ContactRoute
   '/gallery': typeof GalleryRoute
-  '/leadership': typeof LeadershipRoute
-  '/story': typeof StoryRoute
   '/members/$slug': typeof MembersSlugRoute
   '/verify/$memberId': typeof VerifyMemberIdRoute
   '/members/': typeof MembersIndexRoute
@@ -148,15 +103,10 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/about'
     | '/achievements'
-    | '/activities'
     | '/admin'
-    | '/community-service'
     | '/contact'
     | '/gallery'
-    | '/leadership'
-    | '/story'
     | '/members/$slug'
     | '/verify/$memberId'
     | '/members/'
@@ -164,15 +114,10 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/about'
     | '/achievements'
-    | '/activities'
     | '/admin'
-    | '/community-service'
     | '/contact'
     | '/gallery'
-    | '/leadership'
-    | '/story'
     | '/members/$slug'
     | '/verify/$memberId'
     | '/members'
@@ -180,15 +125,10 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
-    | '/about'
     | '/achievements'
-    | '/activities'
     | '/admin'
-    | '/community-service'
     | '/contact'
     | '/gallery'
-    | '/leadership'
-    | '/story'
     | '/members/$slug'
     | '/verify/$memberId'
     | '/members/'
@@ -197,15 +137,10 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
   AchievementsRoute: typeof AchievementsRoute
-  ActivitiesRoute: typeof ActivitiesRoute
   AdminRoute: typeof AdminRoute
-  CommunityServiceRoute: typeof CommunityServiceRoute
   ContactRoute: typeof ContactRoute
   GalleryRoute: typeof GalleryRoute
-  LeadershipRoute: typeof LeadershipRoute
-  StoryRoute: typeof StoryRoute
   MembersSlugRoute: typeof MembersSlugRoute
   VerifyMemberIdRoute: typeof VerifyMemberIdRoute
   MembersIndexRoute: typeof MembersIndexRoute
@@ -221,13 +156,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/achievements': {
       id: '/achievements'
       path: '/achievements'
@@ -235,25 +163,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AchievementsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/activities': {
-      id: '/activities'
-      path: '/activities'
-      fullPath: '/activities'
-      preLoaderRoute: typeof ActivitiesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
     '/admin': {
       id: '/admin'
       path: '/admin'
       fullPath: '/admin'
       preLoaderRoute: typeof AdminRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/community-service': {
-      id: '/community-service'
-      path: '/community-service'
-      fullPath: '/community-service'
-      preLoaderRoute: typeof CommunityServiceRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contact': {
@@ -268,20 +182,6 @@ declare module '@tanstack/react-router' {
       path: '/gallery'
       fullPath: '/gallery'
       preLoaderRoute: typeof GalleryRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/leadership': {
-      id: '/leadership'
-      path: '/leadership'
-      fullPath: '/leadership'
-      preLoaderRoute: typeof LeadershipRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/story': {
-      id: '/story'
-      path: '/story'
-      fullPath: '/story'
-      preLoaderRoute: typeof StoryRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/members/': {
@@ -317,15 +217,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
   AchievementsRoute: AchievementsRoute,
-  ActivitiesRoute: ActivitiesRoute,
   AdminRoute: AdminRoute,
-  CommunityServiceRoute: CommunityServiceRoute,
   ContactRoute: ContactRoute,
   GalleryRoute: GalleryRoute,
-  LeadershipRoute: LeadershipRoute,
-  StoryRoute: StoryRoute,
   MembersSlugRoute: MembersSlugRoute,
   VerifyMemberIdRoute: VerifyMemberIdRoute,
   MembersIndexRoute: MembersIndexRoute,
