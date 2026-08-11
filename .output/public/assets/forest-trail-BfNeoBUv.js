@@ -1,0 +1,1 @@
+var e=`/assets/forest-trail-BoSB8FRc.jpg`;export{e as t};
