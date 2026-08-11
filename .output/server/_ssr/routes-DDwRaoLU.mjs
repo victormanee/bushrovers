@@ -196,7 +196,7 @@ function Home() {
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "mt-6 font-display text-3xl leading-tight text-cream md:text-5xl",
-						children: "We don't simply walk the trail. We go beyond it."
+						children: "We don't simply walk the trail.hhhhh We go beyond it."
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "mt-6 font-condensed text-lg uppercase tracking-[0.2em] text-primary",

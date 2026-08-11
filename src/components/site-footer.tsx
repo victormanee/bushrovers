@@ -54,7 +54,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-border/60 px-4 py-6 text-center font-condensed text-xs uppercase tracking-[0.24em] text-muted-foreground">
-        {CREW.nameUpper} · {new Date().getFullYear()} · We don&apos;t simply walk the trail. We go beyond it.
+        {CREW.nameUpper} · {new Date().getFullYear()} · Created by Victor Manee.
       </div>
     </footer>
   );
