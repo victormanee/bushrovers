@@ -40,7 +40,23 @@ function createSupabaseClient() {
     ];
     const message = `Missing Supabase environment variable(s): ${missing.join(', ')}. Connect Supabase in Lovable Cloud.`;
     console.error(`[Supabase] ${message}`);
-    throw new Error(message);
+    // Don't throw here — return a minimal, non-throwing stub so client-side
+    // bundles (dev preview) can run without Supabase configured.
+    const safeStub: any = {
+      auth: {
+        getSession: async () => ({ data: { session: null } }),
+        onAuthStateChange: () => ({ subscription: { unsubscribe: () => {} } }),
+      },
+      from: () => ({
+        select: () => ({
+          eq: () => ({ maybeSingle: async () => ({ data: null }) }),
+          contains: () => ({ eq: () => ({ maybeSingle: async () => ({ data: null }) }) }),
+        }),
+      }),
+      // generic no-op for other calls
+      rpc: async () => ({ data: null }),
+    };
+    return safeStub as unknown as ReturnType<typeof createSupabaseClient>;
   }
 
   return createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {

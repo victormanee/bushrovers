@@ -7,7 +7,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { CalendarDays, MapPin, Users } from "lucide-react";
-import forest from "@/assets/forest-trail.jpg";
+import crew from "@/assets/crew-image.jpg";
 import { EmptyState, PageHero, Section } from "@/components/page-parts";
 import { fetchActivities } from "@/lib/queries";
 import { formatDate } from "@/lib/site";
@@ -41,7 +41,7 @@ function Activities() {
         eyebrow="Activities"
         title="The Bush Rovers experience"
         lead="From ridge trails at first light to service in our own neighbourhoods — this is how the crew spends its time."
-        image={forest}
+        image={crew}
       />
 
       <Section>

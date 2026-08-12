@@ -6,7 +6,7 @@
 /*
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Compass, Flame, HandHeart, Mountain, Sprout, Users } from "lucide-react";
-import forest from "@/assets/forest-trail.jpg";
+import crew from "@/assets/crew-image.jpg";
 import { PageHero, Section } from "@/components/page-parts";
 import { Button } from "@/components/ui/button";
 import { CREW, PILLARS } from "@/lib/site";
@@ -51,7 +51,7 @@ function About() {
         eyebrow="About us"
         title="A Rover crew built for the trail ahead"
         lead={CREW.intro}
-        image={forest}
+        image={crew}
       />
 
       <Section eyebrow="Our motto" title={`\u201c${CREW.motto}\u201d`}>

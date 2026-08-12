@@ -1,4 +1,3 @@
-import { createRequire } from "node:module";
 //#region \0rolldown/runtime.js
 var __create = Object.create;
 var __defProp = Object.defineProperty;
@@ -30,6 +29,5 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
 	value: mod,
 	enumerable: true
 }) : target, mod));
-var __require = /* #__PURE__ */ (() => createRequire(import.meta.url || "file:///"))();
 //#endregion
-export { __toESM as i, __exportAll as n, __require as r, __commonJSMin as t };
+export { __exportAll as n, __toESM as r, __commonJSMin as t };

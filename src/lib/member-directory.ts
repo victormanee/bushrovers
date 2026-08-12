@@ -1,16 +1,17 @@
 import type { PublicMember, VerifyMember } from "@/lib/member-types";
 import placeholder from "@/assets/member-placeholder.svg";
-//import kelvinNjoroge from "@/assets/kelvin-njoroge.jpg";
+import kelvinNjoroge from "@/assets/kelvin-njoroge.png";
 import victorManee from "@/assets/victor-manee.png";
 //import johnKibara from "@/assets/john-kibara.jpg";
 import evansMaina from "@/assets/evans-maina.jpg";
-/*import andreaneKaniaru from "@/assets/andreane-kaniaru.jpg";
-import antonyNgui from "@/assets/antony-ngui.jpg";
-import angelKabi from "@/assets/angel-kabi.jpg";
-import ashleyMwende from "@/assets/ashley-mwende.jpg";
+import andreaneKaniaru from "@/assets/andreane-kaniaru.png";
+import antonyNgui from "@/assets/antony-ngui.png";
+import angelKabi from "@/assets/angel-kabi.png";
+/*import ashleyMwende from "@/assets/ashley-mwende.jpg";
 import ngumi from "@/assets/ngumi.jpg";
 import solomon from "@/assets/solomon.jpg";
 import john from "@/assets/john.jpg";*/
+import davidKaranja from "@/assets/david-karanja.png";
 
 type LocalMember = Omit<PublicMember, "roles"> & {
   roles: NonNullable<PublicMember["roles"]>;
@@ -46,13 +47,22 @@ const scribeRole: LocalRole = {
   rank: 101,
 };
 
+const crewLeader: LocalRole = {
+  id: "local-role-crew-leader",
+  name: "Crew Leader",
+  description: "Crew Leader role details coming soon.",
+  responsibilities: "To be added",
+  is_leadership: true,
+  rank: 102,
+};
+
 const localMemberProfiles: LocalMember[] = [
   {
     id: "local-kelvin-njoroge",
     slug: "kelvin-njoroge",
     member_id: "BR-001",
     full_name: "Kelvin Njoroge",
-    photo_url: placeholder,
+    photo_url: kelvinNjoroge,
     bio: "Member profile information coming soon.",
     join_date: null,
     birth_day: null,
@@ -66,7 +76,7 @@ const localMemberProfiles: LocalMember[] = [
     current_section: "To be added",
     years_in_scouting: null,
     status: "active",
-    roles: { ...roleToBeAdded },
+    roles: { ...crewLeader },
     is_published: true,
     sort_order: 1,
     role_id: null,
@@ -79,16 +89,16 @@ const localMemberProfiles: LocalMember[] = [
     photo_url: victorManee,
     bio: "Member profile information coming soon.",
     join_date: null,
-    birth_day: null,
-    birth_month: null,
-    show_birthday: false,
-    skills: ["To be added"],
+    birth_day: 28,
+    birth_month: "october",
+    show_birthday: true,
+    skills: ["Programming", "Web Development", "UI/UX Design "],
     interests: ["To be added"],
-    scout_level: "To be added",
+    scout_level: "Jasiri",
     responsibilities: "To be added",
-    previous_section: "To be added",
-    current_section: "To be added",
-    years_in_scouting: null,
+    previous_section: "Mwamba",
+    current_section: "Jasiri",
+    years_in_scouting: 4,
     status: "active",
     roles: { ...scribeRole },
     is_published: true,
@@ -124,7 +134,7 @@ const localMemberProfiles: LocalMember[] = [
     slug: "andreane-kaniaru",
     member_id: "BR-004",
     full_name: "Andreane Kaniaru",
-    photo_url: placeholder,
+    photo_url: andreaneKaniaru,
     bio: "Member profile information coming soon.",
     join_date: null,
     birth_day: null,
@@ -220,7 +230,7 @@ const localMemberProfiles: LocalMember[] = [
     slug: "antony-ngui",
     member_id: "BR-008",
     full_name: "Antony Ngui",
-    photo_url: placeholder,
+    photo_url: antonyNgui,
     bio: "Member profile information coming soon.",
     join_date: null,
     birth_day: null,
@@ -244,7 +254,7 @@ const localMemberProfiles: LocalMember[] = [
     slug: "angel-kabi",
     member_id: "BR-009",
     full_name: "Angel Kabi",
-    photo_url: placeholder,
+    photo_url: angelKabi,
     bio: "Member profile information coming soon.",
     join_date: null,
     birth_day: null,
@@ -309,6 +319,30 @@ const localMemberProfiles: LocalMember[] = [
     roles: { ...roleToBeAdded },
     is_published: true,
     sort_order: 11,
+    role_id: null,
+  },
+  {
+    id: "local-david-karanja",
+    slug: "david-karanja",
+    member_id: "BR-012",
+    full_name: "David Karanja",
+    photo_url: davidKaranja,
+    bio: "Member profile information coming soon.",
+    join_date: null,
+    birth_day: 24,
+    birth_month: "April",
+    show_birthday: true,
+    skills: ["To be added"],
+    interests: ["To be added"],
+    scout_level: "To be added",
+    responsibilities: "To be added",
+    previous_section: "To be added",
+    current_section: "To be added",
+    years_in_scouting: null,
+    status: "active",
+    roles: { ...roleToBeAdded },
+    is_published: true,
+    sort_order: 12,
     role_id: null,
   },
 ];

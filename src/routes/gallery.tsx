@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { X } from "lucide-react";
-import forest from "@/assets/forest-trail.jpg";
+import crew from "@/assets/crew-image.jpg";
 import { EmptyState, PageHero, Section } from "@/components/page-parts";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
@@ -46,7 +46,7 @@ function Gallery() {
         eyebrow="Gallery"
         title="Frames from the trail"
         lead="Moments from the crew's adventures, camps, service projects and competitions."
-        image={forest}
+        image={crew}
       />
 
       <Section>
