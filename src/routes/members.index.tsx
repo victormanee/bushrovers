@@ -33,12 +33,14 @@ function MembersPage() {
   const roles = useQuery({ queryKey: ["roles"], queryFn: fetchRoles });
   const [query, setQuery] = useState("");
   const [role, setRole] = useState<string>("all");
+  const [gender, setGender] = useState<string>("all");
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
     return (members.data ?? [])
       .filter((m) => m.is_published)
       .filter((m) => (role === "all" ? true : m.roles?.name === role))
+      .filter((m) => (gender === "all" ? true : (m.gender ?? "").toLowerCase() === gender))
       .filter((m) =>
         !q
           ? true
@@ -46,7 +48,8 @@ function MembersPage() {
             m.member_id.toLowerCase().includes(q) ||
             (m.roles?.name ?? "").toLowerCase().includes(q),
       );
-  }, [members.data, query, role]);
+  }, [members.data, query, role, gender]);
+
 
   const roleNames = useMemo(() => {
     const used = new Set((members.data ?? []).map((m) => m.roles?.name).filter(Boolean));
@@ -93,6 +96,29 @@ function MembersPage() {
               </Button>
             ))}
           </div>
+          <div className="flex items-center gap-2">
+            <Button
+              variant={gender === "all" ? "default" : "outline"}
+              size="sm"
+              onClick={() => setGender("all")}
+            >
+              All genders
+            </Button>
+            <Button
+              variant={gender === "male" ? "default" : "outline"}
+              size="sm"
+              onClick={() => setGender("male")}
+            >
+              Male
+            </Button>
+            <Button
+              variant={gender === "female" ? "default" : "outline"}
+              size="sm"
+              onClick={() => setGender("female")}
+            >
+              Female
+            </Button>
+            </div>
         </div>
 
         <p className="mt-6 font-condensed text-sm uppercase tracking-[0.2em] text-muted-foreground">
