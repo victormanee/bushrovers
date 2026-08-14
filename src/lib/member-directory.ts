@@ -93,7 +93,7 @@ const localMemberProfiles: LocalMember[] = [
     bio: "Member profile information coming soon.",
     join_date: null,
     birth_day: 28,
-    birth_month: "october",
+    birth_month: 10,
     show_birthday: true,
     skills: ["Programming", "Web Development", "UI/UX Design "],
     interests: ["To be added"],
@@ -285,7 +285,7 @@ const localMemberProfiles: LocalMember[] = [
     bio: "Member profile information coming soon.",
     join_date: null,
     birth_day: 8,
-    birth_month: "may",
+    birth_month: 5,
     show_birthday: true,
     skills: ["To be added"],
     interests: ["To be added"],
@@ -309,7 +309,7 @@ const localMemberProfiles: LocalMember[] = [
     bio: "Member profile information coming soon.",
     join_date: null,
     birth_day: 6,
-    birth_month: "december",
+    birth_month: 12,
     show_birthday: true,
     skills: ["To be added"],
     interests: ["To be added"],
@@ -333,7 +333,7 @@ const localMemberProfiles: LocalMember[] = [
     bio: "Member profile information coming soon.",
     join_date: null,
     birth_day: 23,
-    birth_month: "september",
+    birth_month: 9,
     show_birthday: true,
     skills: ["To be added"],
     interests: ["To be added"],
@@ -381,7 +381,7 @@ const localMemberProfiles: LocalMember[] = [
     bio: "Member profile information coming soon.",
     join_date: null,
     birth_day: 24,
-    birth_month: "April",
+    birth_month: 4,
     show_birthday: true,
     skills: ["To be added"],
     interests: ["To be added"],
@@ -446,7 +446,7 @@ export function mergeMembersWithLocalData<T extends { slug?: string | null }>(me
   for (const member of getLocalMembers()) {
     const exists = merged.some((item) => item.slug === member.slug);
     if (!exists) {
-      merged.push(member as T);
+      merged.push(member as unknown as T);
     }
   }
   return merged.sort((a, b) => {
@@ -461,7 +461,7 @@ export function mergeRolesWithLocalData<T extends { name?: string | null }>(role
   for (const role of getLocalRoles()) {
     const exists = merged.some((item) => item.name === role.name);
     if (!exists) {
-      merged.push(role as T);
+      merged.push(role as unknown as T);
     }
   }
   return merged;
