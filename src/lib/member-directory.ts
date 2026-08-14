@@ -7,7 +7,7 @@ import evansMaina from "@/assets/evans-maina.jpg";
 import andreaneKaniaru from "@/assets/andreane-kaniaru.png";
 import antonyNgui from "@/assets/antony-ngui.png";
 import angelKabi from "@/assets/angel-kabi.png";
-import roseMwendwa from "@/assets/rose-Mwendwa.png";
+import roseMwendwa from "@/assets/rose-mwendwa.png";
 import ashleyMwende from "@/assets/ashley-mwende.png";
 /*import ngumi from "@/assets/ngumi.jpg";
 import solomon from "@/assets/solomon.jpg";*/
