@@ -289,9 +289,9 @@ INSERT INTO public.crew_stats (label, value, sort_order) VALUES
   ('Volunteer Hours', '[0]', 40);
 
 INSERT INTO public.site_settings (key, value) VALUES
-  ('contact_email', '[EMAIL ADDRESS]'),
-  ('contact_phone', '[PHONE NUMBER]'),
-  ('location', '[CREW LOCATION]'),
+  ('contact_email', 'thebushrovers@gmail.com'),
+  ('contact_phone', '0768595560/0795620532'),
+  ('location', 'Alliance High School'),
   ('instagram', ''),
   ('facebook', ''),
   ('twitter', ''),

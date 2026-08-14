@@ -66,7 +66,16 @@ export async function fetchSettings() {
   if (error) throw error;
   const map: Record<string, string> = {};
   for (const row of data ?? []) map[row.key] = row.value ?? "";
-  return map;
+  const defaults: Record<string, string> = {
+    contact_email: "thebushrovers@gmail.com",
+    contact_phone: "0768595560/0795620532",
+    location: "Alliance High School",
+    instagram: "",
+    facebook: "",
+    twitter: "",
+    whatsapp: "",
+  };
+  return { ...defaults, ...map };
 }
 
 export type MemberRow = Awaited<ReturnType<typeof fetchMembers>>[number];
