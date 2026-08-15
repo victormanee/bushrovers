@@ -1,25 +1,21 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import victorManeeCard from "@/assets/victor-manee-card.png";
+import angelKabiCard from "@/assets/amgel-kabi-card.png";
+import johnKibaraCard from "@/assets/john-kibara-card.png";
 import placeholderCard from "@/assets/placeholder-card.png";
+
+// Note: asset discovery is performed client-side in `useEffect` to avoid SSR errors
 import { getPublicMemberBySlug } from "@/lib/public.functions";
 import { CREW } from "@/lib/site";
 
 const memberCardImages: Record<string, string> = {
   "victor-manee": victorManeeCard,
-  "kelvin-njoroge": placeholderCard,
-  "john-kibara": placeholderCard,
-  "andreane-kaniaru": placeholderCard,
-  "evans-maina": placeholderCard,
-  "solomon": placeholderCard,
-  "john": placeholderCard,
-  "antony-ngui": placeholderCard,
-  "angel-kabi": placeholderCard,
-  "ashley-mwende": placeholderCard,
-  "ngumi": placeholderCard,
-  "david-karanja": placeholderCard,
+  "angel-kabi": angelKabiCard,
+  "john-kibara": johnKibaraCard,
+  // discoveredCards will be preferred at runtime for any matching slug
 };
 
 export const Route = createFileRoute("/members/$slug")({
@@ -71,8 +67,35 @@ function MemberNotFound() {
 
 function MemberProfile() {
   const { member } = Route.useLoaderData();
-  const [hasImageError, setHasImageError] = useState(false);
-  const cardUrl = memberCardImages[member!.slug] ?? `/assets/members/${member!.slug}.png`;
+  // Prefer any explicit static mappings first, then discovered assets loaded client-side, then public folder, then placeholder on error
+  const initialUrl = memberCardImages[member!.slug] ?? `/assets/members/${member!.slug}.png`;
+  const [src, setSrc] = useState<string>(initialUrl);
+
+  // Client-only: discover any `*-card.*` assets in src/assets and prefer them
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      const modules: Record<string, any> = (import.meta as any).globEager(
+        "/src/assets/*-card.{png,jpg,jpeg,webp}"
+      );
+      for (const p in modules) {
+        const m = modules[p];
+        const match = p.match(/\/([^\/]+)-card\.(png|jpe?g|webp)$/i);
+        if (!match) continue;
+        let slug = match[1] as string;
+        const url = (m && (m.default ?? m)) as string;
+        // normalize common typo
+        if (slug.startsWith("amgel-")) slug = slug.replace(/^amgel-/, "angel-");
+        if (slug === member!.slug) {
+          setSrc(url);
+          return;
+        }
+      }
+    } catch (e) {
+      // ignore discovery errors on client
+      // console.debug("card discovery failed", e);
+    }
+  }, [member?.slug]);
 
   return (
     <div className="min-h-screen bg-forest-deep text-cream">
@@ -80,21 +103,14 @@ function MemberProfile() {
         <h1 className="sr-only">{member!.full_name} membership card</h1>
 
         <div className="w-full max-w-5xl rounded-[2rem] border border-border bg-background/85 p-6 shadow-[0_32px_80px_rgba(0,0,0,0.32)] backdrop-blur-md">
-          {hasImageError ? (
-            <div className="flex min-h-[40vh] items-center justify-center rounded-[1.5rem] border border-dashed border-muted-foreground bg-secondary/20 p-10">
-              <p className="text-center text-muted-foreground">
-                Membership card image not found.
-                <br />Add <span className="font-mono text-cream">/assets/members/{member!.slug}.png</span> in public.
-              </p>
-            </div>
-          ) : (
-            <img
-              src={cardUrl}
-              alt={`${member!.full_name} membership card`}
-              onError={() => setHasImageError(true)}
-              className="mx-auto max-h-[75vh] w-full max-w-full rounded-[1.5rem] object-contain"
-            />
-          )}
+          <img
+            src={src}
+            alt={`${member!.full_name} membership card`}
+            onError={() => {
+              if (src !== placeholderCard) setSrc(placeholderCard);
+            }}
+            className="mx-auto max-h-[75vh] w-full max-w-full rounded-[1.5rem] object-contain"
+          />
         </div>
 
         <div className="mt-6 flex justify-center">

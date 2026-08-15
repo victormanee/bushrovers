@@ -146,7 +146,7 @@ const localMemberProfiles: LocalMember[] = [
   {
     id: "local-kelvin-njoroge",
     slug: "kelvin-njoroge",
-    member_id: "BR-001",
+    member_id: "BR2026001",
     full_name: "Kelvin Njoroge",
     gender: "male",
     photo_url: kelvinNjoroge,
@@ -171,7 +171,7 @@ const localMemberProfiles: LocalMember[] = [
   {
     id: "local-angel-kabi",
     slug: "angel-kabi",
-    member_id: "BR-002",
+    member_id: "BR2026002",
     full_name: "Angel Kabi",
     gender: "female",
     photo_url: angelKabi,
@@ -196,7 +196,7 @@ const localMemberProfiles: LocalMember[] = [
   {
     id: "local-andreane-kaniaru",
     slug: "andreane-kaniaru",
-    member_id: "BR-003",
+    member_id: "BR2026003",
     full_name: "Andreane Kaniaru",
     gender: "male",
     photo_url: andreaneKaniaru,
@@ -221,7 +221,7 @@ const localMemberProfiles: LocalMember[] = [
   {
     id: "local-rose-mwendwa",
     slug: "rose-mwendwa",
-    member_id: "BR-004",
+    member_id: "BR2026004",
     full_name: "Rose Mwendwa",
     gender: "female",
     photo_url: roseMwendwa,
@@ -246,7 +246,7 @@ const localMemberProfiles: LocalMember[] = [
   {
     id: "local-victor-manee",
     slug: "victor-manee",
-    member_id: "BR-005",
+    member_id: "BR2026005",
     full_name: "Victor Manee",
     gender: "male",
     photo_url: victorManee,
@@ -271,7 +271,7 @@ const localMemberProfiles: LocalMember[] = [
   {
     id: "local-candice",
     slug: "candice",
-    member_id: "BR-006",
+    member_id: "BR2026006",
     full_name: "Candice",
     gender: "female",
     photo_url: placeholder,
@@ -296,7 +296,7 @@ const localMemberProfiles: LocalMember[] = [
   {
     id: "local-john-kibara",
     slug: "john-kibara",
-    member_id: "BR-007",
+    member_id: "BR2026007",
     full_name: "John Kibara",
     gender: "male",
     photo_url: johnKibara,
@@ -321,7 +321,7 @@ const localMemberProfiles: LocalMember[] = [
   {
     id: "local-ashley-mwende",
     slug: "ashley-mwende",
-    member_id: "BR-008",
+    member_id: "BR2026008",
     full_name: "Ashley Mwende",
     gender: "female",
     photo_url: ashleyMwende,
@@ -346,7 +346,7 @@ const localMemberProfiles: LocalMember[] = [
   {
     id: "local-evans-maina",
     slug: "evans-maina",
-    member_id: "BR-009",
+    member_id: "BR2026009",
     full_name: "Evans Maina",
     gender: "male",
     photo_url: evansMaina,
@@ -371,7 +371,7 @@ const localMemberProfiles: LocalMember[] = [
   {
     id: "local-ivana",
     slug: "ivana",
-    member_id: "BR-010",
+    member_id: "BR2026010",
     full_name: "Ivana",
     gender: "female",
     photo_url: placeholder,
@@ -396,7 +396,7 @@ const localMemberProfiles: LocalMember[] = [
   {
     id: "local-jackson-kagema",
     slug: "jackson-kagema",
-    member_id: "BR-011",
+    member_id: "BR2026011",
     full_name: "Jackson Kagema",
     gender: "male",
     photo_url: placeholder,
@@ -421,7 +421,7 @@ const localMemberProfiles: LocalMember[] = [
   {
     id: "local-hope-ngumi",
     slug: "hope-ngumi",
-    member_id: "BR-012",
+    member_id: "BR2026012",
     full_name: "Hope Ngumi",
     gender: "female",
     photo_url: placeholder,
@@ -446,7 +446,7 @@ const localMemberProfiles: LocalMember[] = [
   {
     id: "local-derrick-owuor",
     slug: "derrick-owuor",
-    member_id: "BR-013",
+    member_id: "BR2026013",
     full_name: "Derrick Owuor",
     gender: "male",
     photo_url: derickOwuor,
@@ -471,7 +471,7 @@ const localMemberProfiles: LocalMember[] = [
   {
     id: "local-solomon",
     slug: "solomon",
-    member_id: "BR-014",
+    member_id: "BR2026014",
     full_name: "Solomon",
     gender: "male",
     photo_url: placeholder,
@@ -496,7 +496,7 @@ const localMemberProfiles: LocalMember[] = [
   {
     id: "local-antony-ngui",
     slug: "antony-ngui",
-    member_id: "BR-015",
+    member_id: "BR2026015",
     full_name: "Antony Ngui",
     gender: "male",
     photo_url: antonyNgui,
@@ -521,7 +521,7 @@ const localMemberProfiles: LocalMember[] = [
   {
     id: "local-david-karanja",
     slug: "david-karanja",
-    member_id: "BR-016",
+    member_id: "BR2026016",
     full_name: "David Karanja",
     gender: "male",
     photo_url: davidKaranja,
@@ -546,7 +546,7 @@ const localMemberProfiles: LocalMember[] = [
   {
     id: "local-machoka",
     slug: "machoka",
-    member_id: "BR-017",
+    member_id: "BR2026017",
     full_name: "Machoka",
     gender: "male",
     photo_url: placeholder,

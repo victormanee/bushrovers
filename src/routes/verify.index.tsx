@@ -53,7 +53,7 @@ function VerifyIndex() {
             id="member-id"
             value={value}
             onChange={(event) => setValue(event.target.value.slice(0, 40))}
-            placeholder="BR-2026-001"
+            placeholder="BR2026001"
             className="font-condensed uppercase tracking-[0.2em]"
           />
           <Button type="submit" size="lg">

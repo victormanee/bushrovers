@@ -6,7 +6,7 @@ import hero from "@/assets/hero-ridge.png";
 import { EmptyState, PageHero, Section } from "@/components/page-parts";
 import { MemberCard } from "@/components/member-card";
 import { Input } from "@/components/ui/input";
-import { fetchMembers, fetchRoles } from "@/lib/queries";
+import { fetchMembers, fetchRoles, MemberRow, RoleRow } from "@/lib/queries";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/members/")({
@@ -29,8 +29,8 @@ export const Route = createFileRoute("/members/")({
 });
 
 function MembersPage() {
-  const members = useQuery({ queryKey: ["members"], queryFn: fetchMembers });
-  const roles = useQuery({ queryKey: ["roles"], queryFn: fetchRoles });
+  const members = useQuery<MemberRow[]>({ queryKey: ["members"], queryFn: fetchMembers });
+  const roles = useQuery<RoleRow[]>({ queryKey: ["roles"], queryFn: fetchRoles });
   const [query, setQuery] = useState("");
   const [role, setRole] = useState<string>("all");
   const [gender, setGender] = useState<string>("all");
