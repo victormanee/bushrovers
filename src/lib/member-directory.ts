@@ -5,17 +5,17 @@ import victorManee from "@/assets/victor-manee.png";
 import johnKibara from "@/assets/john-kibara.jpeg";
 import evansMaina from "@/assets/evans-maina.jpg";
 import andreaneKaniaru from "@/assets/andreane-kaniaru.png";
-import antonyNgui from "@/assets/antony-ngui.png";
+//import antonyNgui from "@/assets/antony-ngui.png";
 import angelKabi from "@/assets/angel-kabi.png";
 import roseMwendwa from "@/assets/rose-mwendwa.png";
 import ashleyMwende from "@/assets/ashley-mwende.png";
-/*import hopeNgumi from "@/assets/hope-ngumi.jpg";
-import solomon from "@/assets/solomon.jpg";*/
+import hopeWanjiru from "@/assets/hope-wanjiru.png";
+//import solomon from "@/assets/solomon.jpg";
 import derickOwuor from "@/assets/derick-owuor.png";
-/*import machoka from "@/assets/machoka.jpg";
-import jacksonKagema from "@/assets/jackson-kagema.jpg";
-import ivana from "@/assets/ivana.jpg"
-import candice from "@/assets/candice.jpg"*/
+//import machoka from "@/assets/machoka.jpg";
+import jacksonKagema from "@/assets/jackson-kagema.jpeg";
+import ivanaFlorence from "@/assets/ivana-florence.jpeg"
+import candiceKangethe from "@/assets/candice-kang'ethe.jpeg"
 import davidKaranja from "@/assets/david-karanja.png";
 import { de } from "date-fns/locale";
 
@@ -269,17 +269,17 @@ const localMemberProfiles: LocalMember[] = [
     role_id: "local-role-scribe",
   },
   {
-    id: "local-candice",
-    slug: "candice",
+    id: "local-candice-kangéthe",
+    slug: "candice-kangéthe",
     member_id: "BR2026006",
-    full_name: "Candice",
+    full_name: "Candice Kangéthe",
     gender: "female",
-    photo_url: placeholder,
+    photo_url: candiceKangethe,
     bio: "Member profile information coming soon.",
     join_date: null,
-    birth_day: null,
-    birth_month: null,
-    show_birthday: false,
+    birth_day: 3,
+    birth_month: 6,
+    show_birthday: true,
     skills: ["To be added"],
     interests: ["To be added"],
     scout_level: "To be added",
@@ -369,16 +369,16 @@ const localMemberProfiles: LocalMember[] = [
     role_id: "local-role-quater-master",
   },
   {
-    id: "local-ivana",
-    slug: "ivana",
+    id: "local-ivana-florence",
+    slug: "ivana-florence",
     member_id: "BR2026010",
-    full_name: "Ivana",
+    full_name: "Ivana Florence Nyangi",
     gender: "female",
-    photo_url: placeholder,
+    photo_url: ivanaFlorence,
     bio: "Member profile information coming soon.",
     join_date: null,
-    birth_day: 13,
-    birth_month: 5,
+    birth_day: 9,
+    birth_month: 10,
     show_birthday: true,
     skills: ["To be added"],
     interests: ["To be added"],
@@ -399,7 +399,7 @@ const localMemberProfiles: LocalMember[] = [
     member_id: "BR2026011",
     full_name: "Jackson Kagema",
     gender: "male",
-    photo_url: placeholder,
+    photo_url: jacksonKagema,
     bio: "Member profile information coming soon.",
     join_date: null,
     birth_day: null,
@@ -419,17 +419,17 @@ const localMemberProfiles: LocalMember[] = [
     role_id: "local-role-drills-master",
   },
   {
-    id: "local-hope-ngumi",
-    slug: "hope-ngumi",
+    id: "local-hope-wanjiru",
+    slug: "hope-wanjiru",
     member_id: "BR2026012",
-    full_name: "Hope Ngumi",
+    full_name: "Hope Wanjiru",
     gender: "female",
-    photo_url: placeholder,
+    photo_url: hopeWanjiru,
     bio: "Member profile information coming soon.",
     join_date: null,
-    birth_day: null,
-    birth_month: null,
-    show_birthday: false,
+    birth_day: 16,
+    birth_month: 4,
+    show_birthday: true,
     skills: ["To be added"],
     interests: ["To be added"],
     scout_level: "To be added",
@@ -493,7 +493,7 @@ const localMemberProfiles: LocalMember[] = [
     sort_order: 14,
     role_id: "local-role-den-keeper",
   },
-  {
+  /*{
     id: "local-antony-ngui",
     slug: "antony-ngui",
     member_id: "BR2026015",
@@ -517,7 +517,7 @@ const localMemberProfiles: LocalMember[] = [
     is_published: true,
     sort_order: 15,
     role_id: "local-role-spiritual-leader",
-  },
+  },*/
   {
     id: "local-david-karanja",
     slug: "david-karanja",
