@@ -3,20 +3,21 @@ import placeholder from "@/assets/member-placeholder.svg";
 import kelvinNjoroge from "@/assets/kelvin-njoroge.png";
 import victorManee from "@/assets/victor-manee.png";
 import johnKibara from "@/assets/john-kibara.jpeg";
-import evansMaina from "@/assets/evans-maina.jpg";
+import evansMaina from "@/assets/evans-maina.png";
 import andreaneKaniaru from "@/assets/andreane-kaniaru.png";
-//import antonyNgui from "@/assets/antony-ngui.png";
+import antonyNgui from "@/assets/antony-ngui.png";
 import angelKabi from "@/assets/angel-kabi.png";
 import roseMwendwa from "@/assets/rose-mwendwa.png";
 import ashleyMwende from "@/assets/ashley-mwende.png";
 import hopeWanjiru from "@/assets/hope-wanjiru.png";
-//import solomon from "@/assets/solomon.jpg";
+import solomonMuchiri from "@/assets/solomon-muchiri.png";
 import derickOwuor from "@/assets/derick-owuor.png";
-//import machoka from "@/assets/machoka.jpg";
+import mosesMachoka from "@/assets/moses-machoka.jpeg";
 import jacksonKagema from "@/assets/jackson-kagema.jpeg";
 import ivanaFlorence from "@/assets/ivana-florence.jpeg"
 import candiceKangethe from "@/assets/candice-kang'ethe.jpeg"
 import davidKaranja from "@/assets/david-karanja.png";
+import martinaWere from "@/assets/martina-were.jpeg";
 import { de } from "date-fns/locale";
 
 type LocalMember = Omit<PublicMember, "roles"> & {
@@ -469,12 +470,12 @@ const localMemberProfiles: LocalMember[] = [
     role_id: "local-role-advisor-general",
   },
   {
-    id: "local-solomon",
-    slug: "solomon",
+    id: "local-solomon-muchiri",
+    slug: "solomon-muchiri",
     member_id: "BR2026014",
-    full_name: "Solomon",
+    full_name: "Solomon Muchiri",
     gender: "male",
-    photo_url: placeholder,
+    photo_url: solomonMuchiri,
     bio: "Member profile information coming soon.",
     join_date: null,
     birth_day: null,
@@ -493,7 +494,7 @@ const localMemberProfiles: LocalMember[] = [
     sort_order: 14,
     role_id: "local-role-den-keeper",
   },
-  /*{
+  {
     id: "local-antony-ngui",
     slug: "antony-ngui",
     member_id: "BR2026015",
@@ -517,7 +518,7 @@ const localMemberProfiles: LocalMember[] = [
     is_published: true,
     sort_order: 15,
     role_id: "local-role-spiritual-leader",
-  },*/
+  },
   {
     id: "local-david-karanja",
     slug: "david-karanja",
@@ -544,16 +545,16 @@ const localMemberProfiles: LocalMember[] = [
     role_id: "local-role-resource-manager",
   },
   {
-    id: "local-machoka",
-    slug: "machoka",
+    id: "local-moses-machoka",
+    slug: "moses-machoka",
     member_id: "BR2026017",
-    full_name: "Machoka",
+    full_name: "Moses Machoka",
     gender: "male",
-    photo_url: placeholder,
+    photo_url: mosesMachoka,
     bio: "Member profile information coming soon.",
     join_date: null,
-    birth_day: null,
-    birth_month: null,
+    birth_day: 26,
+    birth_month: 1,
     show_birthday: false,
     skills: ["To be added"],
     interests: ["To be added"],
@@ -567,6 +568,31 @@ const localMemberProfiles: LocalMember[] = [
     is_published: true,
     sort_order: 17,
     role_id: "local-role-events-and-activities-coordinator" ,
+  },
+  {
+    id: "local-martina-were",
+    slug: "martina-were",
+    member_id: "BR2026018",
+    full_name: "Martina Were",
+    gender: "female",
+    photo_url: martinaWere,
+    bio: "Member profile information coming soon.",
+    join_date: null,
+    birth_day: 22,
+    birth_month: 11,
+    show_birthday: true,
+    skills: ["To be added"],
+    interests: ["To be added"],
+    scout_level: "To be added",
+    responsibilities: "To be added",
+    previous_section: "To be added",
+    current_section: "To be added",
+    years_in_scouting: null,
+    status: "active",
+    roles: { ...denKeeper },
+    is_published: true,
+    sort_order: 17,
+    role_id: "to-be-added" ,
   },
 ];
 
