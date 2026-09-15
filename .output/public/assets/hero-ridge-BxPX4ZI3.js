@@ -1,0 +1,1 @@
+var e=`/assets/hero-ridge-s2uuG71s.png`;export{e as t};
