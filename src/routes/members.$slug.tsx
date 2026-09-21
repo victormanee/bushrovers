@@ -2,9 +2,17 @@ import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import kelvinNjorogeCard from "@/assets/kelvin-njoroge-card.png";
+import roseMwendwaCard from "@/assets/rose-mwendwa-card.png";
+import angelKabiCard from "@/assets/angel-kabi-card.png";
+import andreaneKaniaruCard from "@/assets/andreane-kaniaru-card.png";
+import candiceKangetheCard from "@/assets/candice-kangethe-card.png";
 import victorManeeCard from "@/assets/victor-manee-card.png";
-import angelKabiCard from "@/assets/amgel-kabi-card.png";
+import ashleyMwendeCard from "@/assets/ashley-mwende-card.png";
 import johnKibaraCard from "@/assets/john-kibara-card.png";
+import derrickOwuorCard from "@/assets/derrick-owuor-card.png";
+import mosesMachokaCard from "@/assets/moses-machoka-card.png";
+import hopeWanjiruCard from "@/assets/hope-wanjiru-card.png";
 import placeholderCard from "@/assets/placeholder-card.png";
 
 // Note: asset discovery is performed client-side in `useEffect` to avoid SSR errors
@@ -12,9 +20,17 @@ import { getPublicMemberBySlug } from "@/lib/public.functions";
 import { CREW } from "@/lib/site";
 
 const memberCardImages: Record<string, string> = {
+  "kelvin-njoroge": kelvinNjorogeCard,
+  "rose-mwendwa": roseMwendwaCard,
+  "andreane-kaniaru": andreaneKaniaruCard,
+  "candice-kangéthe": candiceKangetheCard,
+  "ashley-mwende": ashleyMwendeCard,
   "victor-manee": victorManeeCard,
   "angel-kabi": angelKabiCard,
   "john-kibara": johnKibaraCard,
+  "derrick-owuor": derrickOwuorCard,
+  "moses-machoka": mosesMachokaCard,
+  "hope-wanjiru": hopeWanjiruCard,
   // discoveredCards will be preferred at runtime for any matching slug
 };
 

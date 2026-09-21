@@ -7,7 +7,7 @@ export function PageHero({
   image,
   children,
 }: {
-  eyebrow: string;
+  eyebrow: string;z
   title: string;
   lead?: string;
   image: string;
