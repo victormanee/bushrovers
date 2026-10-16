@@ -54,7 +54,16 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-border/60 px-4 py-6 text-center font-condensed text-xs uppercase tracking-[0.24em] text-muted-foreground">
-        {CREW.nameUpper} · {new Date().getFullYear()} · Created by Victor Manee.
+        {CREW.nameUpper} · {new Date().getFullYear()} · Created by{" "}
+        <a
+          href="https://victormanee.vercel.app"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="transition-colors hover:text-primary"
+        >
+          Victor Manee
+        </a>
+        .
       </div>
     </footer>
   );
